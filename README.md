@@ -1,8 +1,5 @@
 # Hy-LIN: Hybrid Latent Interaction Network for Bug Triage
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-%3E%3D1.12-red.svg)](https://pytorch.org/)
-
 This repository provides the reference implementation accompanying the paper **"Hy-LIN: Reconstructing Latent Collaborations for Bug Triage with Dual-Path Graph Learning"**.
 
 ## 💡 Overview
