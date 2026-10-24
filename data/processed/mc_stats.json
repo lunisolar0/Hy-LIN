@@ -1,0 +1,11 @@
+{
+  "drop:duplicate": 58,
+  "drop:duplicate_conflicting_owner": 1,
+  "drop:no_textual_content": 1,
+  "drop:test_junk": 5,
+  "drop:unassigned_owner": 3150,
+  "input": 128215,
+  "output": 125000,
+  "output_empty_description": 8181,
+  "output_owners": 2612
+}

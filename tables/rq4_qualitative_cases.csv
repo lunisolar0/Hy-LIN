@@ -1,0 +1,205 @@
+dataset,query_id,title,gold_owner,gold_train_count,lightgcn_rank,hylin_rank,rank_gain,hylin_top1,lightgcn_top1
+gc,328,Push Messaging Browser tests should test subscription from ServiceWorkers,harkness@chromium.org,3,2313,4,2309,joh...@chromium.org,davidjames@chromium.org
+gc,3014,Corner Passthrough for Touch Accessibility,lisayin@chromium.org,3,2250,3,2247,dmazz...@chromium.org,davidjames@chromium.org
+gc,835,"ASSERTION FAILED: !m_deletionHasBegun, Heap-use-after-free in WebCore::GenericEventQueue::enqueueEvent",vcarbune@chromium.org,3,2228,1,2227,vcarbune@chromium.org,davidjames@chromium.org
+gc,5908,MemoryInfra: base_unittest OverflowDeathTest failing ,ruuda@google.com,4,2194,2,2192,ssid@chromium.org,davidjames@chromium.org
+gc,10334,Add UMA metrics to track usage of pointerevents,sahel@chromium.org,1,2183,1,2182,sahel@chromium.org,davidjames@chromium.org
+gc,7525,Change VideoCaptureDeliverFrameCB: |const base::TimeTicks&| --> |base::TimeTicks|,ajose@chromium.org,3,2160,4,2156,hclam@chromium.org,davidjames@chromium.org
+gc,10626,Youtube video is not playing in HTML5 player,avkodipelli@chromium.org,4,2163,10,2153,ihf@chromium.org,davidjames@chromium.org
+gc,10840,[Lumpy][WPA2PSK] Ping packets lost during suspend resume against Dlink dir 6051 at 2.4 GHz,asnagarajan@chromium.org,4,2083,10,2073,quiche@chromium.org,davidjames@chromium.org
+gc,8790,"Rendering the property, text-align-last.",dw...@samsung.com,1,2072,8,2064,lushnikov@chromium.org,davidjames@chromium.org
+gc,650,Prevent resize of blimp view on showing IME,shaktisahu@chromium.org,4,2025,2,2023,bryeung@chromium.org,davidjames@chromium.org
+gc,743,Moblab: Scheduler won't start,jakobjuelich@chromium.org,2,2027,6,2021,sbasi@chromium.org,davidjames@chromium.org
+gc,3950,Fixit test cleanup for Contextual Search,donnd@chromium.org,3,2011,1,2010,donnd@chromium.org,davidjames@chromium.org
+gc,644,UBSan build for Libfuzzer,mmoroz@chromium.org,2,2006,5,2001,och...@chromium.org,davidjames@chromium.org
+mc,8364,Wave Decoding on problematic files and 6-8 channel files,louis@christie.kiwi.nz,3,2000,1,1999,louis@christie.kiwi.nz,bzbarsky@mit.edu
+mc,6992,Change Wave decoder to Media Data Decoder / Demuxer,louis@christie.kiwi.nz,3,2000,5,1995,kinetik@flim.org,bzbarsky@mit.edu
+mc,3943,document inIDOMUtils.getRuleLine and getRuleColumn,ttromey@mozilla.com,4,1950,2,1948,dcrewi@gyrae.net,bzbarsky@mit.edu
+mc,7352,PCToLineNumber incorrectly resets column number,ttromey@mozilla.com,4,1950,2,1948,sphink@gmail.com,bzbarsky@mit.edu
+mc,3774,getRelativeRuleLine yields wrong result after DOMUtils.parseStyleSheet,ttromey@mozilla.com,4,1950,3,1947,attinasi@formerly-netscape.com.tld,bzbarsky@mit.edu
+mc,11578,[webvtt] Use PositionAlignSetting type for VTTCue's positionAlign,alwu@mozilla.com,3,1895,2,1893,rick.eyre@hotmail.com,bzbarsky@mit.edu
+mc,11628,[webvtt] Use LineAlignSetting for VTTCue's lineAlign,alwu@mozilla.com,3,1895,2,1893,rick.eyre@hotmail.com,bzbarsky@mit.edu
+gc,5397,Horizontal scroll for touch_ScrollDirection test using touchpad,dsunkara@chromium.org,4,1837,1,1836,dsunkara@chromium.org,davidjames@chromium.org
+gc,808,cros flash run takes 12 seconds to get started writing the image,yimingc@chromium.org,3,1836,5,1831,yjhong@chromium.org,davidjames@chromium.org
+gc,9787,"When cros flash/deploy fails, it should cat /etc/lsb-release ",yimingc@chromium.org,3,1836,9,1827,yjhong@chromium.org,davidjames@chromium.org
+gc,3264,Mojom parsing error messages are not useful,azani@chromium.org,1,1795,8,1787,darin@chromium.org,davidjames@chromium.org
+mc,1896,Click-to-play overlay stops working after blocking a plugin,smokey101stair@gmail.com,2,1749,5,1744,gfritzsche@mozilla.com,bzbarsky@mit.edu
+mc,2440,Click-to-play overlay does not work if it starts in a non-visible state,smokey101stair@gmail.com,2,1749,9,1740,dkeeler@mozilla.com,bzbarsky@mit.edu
+mc,4600,Ship subresource integrity enabled by default,francois@mozilla.com,3,1732,3,1729,cabanier@adobe.com,bzbarsky@mit.edu
+mc,4895,Properly support data: and blob: URIs with an integrity atribute,francois@mozilla.com,3,1732,10,1722,amarchesini@mozilla.com,bzbarsky@mit.edu
+mc,7854,No attribute PROTOCOL_SSLv3 error for artifact builds on Linux,cmanchester@mozilla.com,1,1729,10,1719,gps@mozilla.com,bzbarsky@mit.edu
+gc,4687,[CSS Regions] Remove the offsetFromLogicalTopOfFirstPage parameter from layout functions,abucur@chromium.org,1,1719,4,1715,abu...@adobe.com,davidjames@chromium.org
+gc,6801,11.2%-21.5% regression in blink_perf.events at 384207:384225,koten...@yandex-team.ru,1,1696,1,1695,koten...@yandex-team.ru,davidjames@chromium.org
+mc,11562,background-repeat: space doesn't work with gradients,ethlin@mozilla.com,4,1640,2,1638,roc@ocallahan.org,bzbarsky@mit.edu
+mc,11564,background-repeat:space doesn't fit an image that fits exactly,ethlin@mozilla.com,4,1640,5,1635,roc@ocallahan.org,bzbarsky@mit.edu
+gc,10149,"update-w3c-deps removes executable bit, which can fail to land the CL",raikiri@google.com,3,1604,2,1602,dcampb@google.com,davidjames@chromium.org
+gc,254,Page breadcrumbs broken after 0.8 upgrade.,jlklein@chromium.org,4,1600,2,1598,tsergeant@chromium.org,davidjames@chromium.org
+mc,10453,crash when iceRestart option is provided on first create offer,mfroman@nostrum.com,2,1591,4,1587,docfaraday@gmail.com,bzbarsky@mit.edu
+gc,925,requestAutocomplete test site does not request shipping name,jakearchibald@chromium.org,2,1584,8,1576,ramankk@chromium.org,davidjames@chromium.org
+mc,8539,Improve self-hosted Array.sort performance,winter2718@gmail.com,1,1568,5,1563,till@tillschneidereit.net,bzbarsky@mit.edu
+gc,308,Crash in cricket::P2PTransportChannel::SortConnections() ,pthatcher@chromium.org,2,1558,4,1554,braveyao@chromium.org,davidjames@chromium.org
+gc,5357,Restart Blimp engine within Docker container if it exits cleanly,marcinjb@chromium.org,1,1529,9,1520,manisca...@chromium.org,davidjames@chromium.org
+gc,3182,Transition Web Speech Recognition from compile-time to run-time flag,janx@chromium.org,2,1498,1,1497,janx@chromium.org,davidjames@chromium.org
+gc,7307,SpeechRecognitionErrorCode enum should be generated from a template,janx@chromium.org,2,1498,1,1497,janx@chromium.org,davidjames@chromium.org
+gc,7350,Implement SpeechRecognizerImplAndroid,janx@chromium.org,2,1498,1,1497,janx@chromium.org,davidjames@chromium.org
+gc,7882,Naked protected member in SpeechRecognizer class,janx@chromium.org,2,1498,8,1490,satish@chromium.org,davidjames@chromium.org
+gc,1794,Replace Arial with Segoe UI for Arabic text on Windows,ebra...@gnu.org,2,1460,2,1458,e...@chromium.org,davidjames@chromium.org
+gc,6787,"gerrit showing Merged patches in ""Related Changes""",dborowitz@google.com,1,1442,6,1436,ferringb@chromium.org,davidjames@chromium.org
+mc,1155,[nested_oop] Close PContentBridge when the nested content process is about to shut down,kechang@mozilla.com,2,1433,6,1427,bent.mozilla@gmail.com,bzbarsky@mit.edu
+gc,1386,"Decode errors up 5x with Chrome 36 rollout on YT, linked to VP9",vigneshv@chromium.org,2,1429,4,1425,posciak@chromium.org,davidjames@chromium.org
+mc,6107,[css-grid] Put the 'subgrid' support behind a pref disabled by default,tschneider@mozilla.com,3,1412,2,1410,simon.sapin@exyr.org,bzbarsky@mit.edu
+gc,5419,"Expose class, id, and src IAccessible2 attributes",je_julie.kim@chromium.org,3,1408,10,1398,shreera...@samsung.com,davidjames@chromium.org
+mc,6516,Cherry-pick Delay-Agnostic AEC from later upstream versions of webrtc,pkerr@mozilla.com,4,1364,8,1356,rjesup@jesup.org,bzbarsky@mit.edu
+mc,6115,about:webrtc includes calls from private browsing mode even after last pb session is closed,pkerr@mozilla.com,4,1364,10,1354,rjesup@jesup.org,bzbarsky@mit.edu
+gc,2205,Don't load SPI GPT on recovery mode in depthcharge,dehrenberg@chromium.org,2,1337,1,1336,dehrenberg@chromium.org,davidjames@chromium.org
+gc,224,Remove statically linked in cast certificate information,vadimgo@chromium.org,1,1339,10,1329,hguihot@chromium.org,davidjames@chromium.org
+gc,51,Canvas 2D strokes do not multiply lineWidth with scale,ethannicholas@chromium.org,3,1323,7,1316,bsalo...@google.com,davidjames@chromium.org
+mc,2032,Source package should use consistent prefix directory,rail@mozilla.com,4,1299,1,1298,rail@mozilla.com,bzbarsky@mit.edu
+mc,7093,"""make package MOZ_PKG_PRETTYNAMES=1"" is busted",rail@mozilla.com,4,1299,8,1291,mh+mozilla@glandium.org,bzbarsky@mit.edu
+gc,1973,Remote desktop doesn't support audio on Windows with curtain mode enabled,zijiehe@chromium.org,2,1286,10,1276,tommi@chromium.org,davidjames@chromium.org
+gc,2173,"History: Underline ""Other Devices"" links",dwankri@chromium.org,4,1239,1,1238,dwankri@chromium.org,davidjames@chromium.org
+gc,3408,History (Other Devices): Fix more links cursor on hover from default cursor to hand,dwankri@chromium.org,4,1239,2,1237,dubroy@chromium.org,davidjames@chromium.org
+gc,3629,History (Other Devices): Line up overflow open tabs link with history div,dwankri@chromium.org,4,1239,2,1237,dubroy@chromium.org,davidjames@chromium.org
+gc,8474,Snippet history text not aligned with favicon,dwankri@chromium.org,4,1239,4,1235,dubroy@chromium.org,davidjames@chromium.org
+mc,581,Restore support for binary components in extensions on a per-application basis,philipp@bugzilla.kewis.ch,4,1220,2,1218,standard8@mozilla.com,bzbarsky@mit.edu
+gc,8829,"Selecting Allow in ""Allow sites to access your camera and microphone"" doesn't remembered in future visits",punyabrata@chromium.org,1,1196,3,1193,msramek@chromium.org,davidjames@chromium.org
+mf,300,About:home sync icon should link to about:preferences#sync,zack.carter@gmail.com,4,1156,6,1150,adw@mozilla.com,dao+bmo@mozilla.com
+gc,11125,Chrome OS - Eureka setup app does not display Chromecast's MAC address and IP address.,tuanav@chromium.org,1,1146,2,1144,tbarzic@chromium.org,davidjames@chromium.org
+gc,10758,"""Time at home"" Now card doesn't update",rgustaf...@chromium.org,4,1135,1,1134,rgustaf...@chromium.org,davidjames@chromium.org
+gc,11577,Notifications reappearing after dismissal,rgustaf...@chromium.org,4,1135,8,1127,robliao@chromium.org,davidjames@chromium.org
+gc,11506,"Verified access ""Learn more"" link broken",arneil@chromium.org,1,1132,9,1123,dbeam@chromium.org,davidjames@chromium.org
+mf,1969,Expose distributionId as part of the appinfo configuration,bzhao@mozilla.com,4,1121,7,1114,thunder@mozilla.com,dao+bmo@mozilla.com
+mc,9908,IonMonkey: MIPS32: Fix MacroAssembler::branchValueIsNurseryObject,r@hev.cc,1,1105,7,1098,branislav.rankov@rt-rk.com,bzbarsky@mit.edu
+mc,2190,X11 SHM invalidation units are wrong on HiDPI with GTK3,andrew@comminos.com,3,1076,1,1075,andrew@comminos.com,bzbarsky@mit.edu
+mc,1833,Synthesis of native mouse scroll events is incorrect on GTK3,andrew@comminos.com,3,1076,2,1074,masayuki@d-toybox.com,bzbarsky@mit.edu
+mc,4841,Provide environment variable to enable XInput 2 on GTK3,andrew@comminos.com,3,1076,3,1073,blizzard@mozilla.com,bzbarsky@mit.edu
+mc,1832,Popup sizing is often incorrect on GTK3 with HiDPI,andrew@comminos.com,3,1076,6,1070,jfkthame@gmail.com,bzbarsky@mit.edu
+gc,660,Blink GC plugin doesn't understand templated super trace call,zerny@chromium.org,4,1051,1,1050,zerny@chromium.org,davidjames@chromium.org
+gc,487,BlinkGCPlugin crash-on-invalid,zerny@chromium.org,4,1051,2,1049,h...@chromium.org,davidjames@chromium.org
+mc,8693,[Decoder Doctor] Detect missing linux codecs and notify frontend (to notify user),gsquelart@mozilla.com,1,1040,4,1036,cajbir.bugzilla@cd.pn,bzbarsky@mit.edu
+gc,10800,A hidden row is inserted when user inserts a new row between hidden rows. ,upasana....@synerzip.com,2,1026,1,1025,upasana....@synerzip.com,davidjames@chromium.org
+gc,4764,Heap-buffer-overflow in WebRtcIsacfix_Decode,turajs@chromium.org,2,1010,1,1009,turajs@chromium.org,davidjames@chromium.org
+gc,1668,[Linux] UI scaling set too high,stapelberg@google.com,2,1001,1,1000,stapelberg@google.com,davidjames@chromium.org
+mf,1133,foxyproxy no longer working in Nightly since 2016-01-07-03-02-35-mozilla-central,jesper@staunhansen.dk,1,1003,7,996,mconnor@mozilla.com,dao+bmo@mozilla.com
+gc,7222,Source and destination overlap in memcpy in QUIC tests,ianswett@chromium.org,1,985,9,976,rch@chromium.org,davidjames@chromium.org
+mf,71,crash in nsACString_internal::SetCapacity probably Roboform-related,dmajor@bugmail.cc,3,964,1,963,dmajor@bugmail.cc,dao+bmo@mozilla.com
+gc,6919,() javascript syntax error has changed,wingo@chromium.org,3,959,1,958,wingo@chromium.org,davidjames@chromium.org
+gc,5741,Sheriffbot-Auto-triage Rule: Launch bugs - 3 milestones older than current stable milestone,cda...@chromium.org,4,950,1,949,cda...@chromium.org,davidjames@chromium.org
+gc,323,"Sheriffbot-Auto-triage Rule: Needs-Feedback Bugs, already received feedback 7 days ago",cda...@chromium.org,4,950,2,948,gov...@chromium.org,davidjames@chromium.org
+gc,214,InstantExtended: NTP Thumbnails load very slow,cda...@chromium.org,4,950,5,945,samarth@chromium.org,davidjames@chromium.org
+gc,5019,"File ""not commonly downloaded and could be dangerous""; was working a few days ago",zbutler@chromium.org,3,923,2,921,asanka@chromium.org,davidjames@chromium.org
+gc,1848,[CSSRegions] Constrain auto-height region computation in a different way,mihnea.a...@gmail.com,4,904,6,898,abu...@adobe.com,davidjames@chromium.org
+gc,7965,Content settings clean-up: Create content_settings_test_utils,lucinka....@gmail.com,4,864,5,859,vasi...@chromium.org,davidjames@chromium.org
+gc,2676,bluetooth: mac: Low Energy Device Discovery,krstnmnlsn@chromium.org,3,860,2,858,bryeung@chromium.org,davidjames@chromium.org
+gc,4751,Allow access to the timing of the most recent device inquiry update (in class device::BluetoothDevice),krstnmnlsn@chromium.org,3,860,4,856,armansito@chromium.org,davidjames@chromium.org
+gc,523,ChromeDriver is broken on Chrome OS R38,samu...@chromium.org,2,847,1,846,samu...@chromium.org,davidjames@chromium.org
+gc,1460,Libfuzzer support on mac,aizatsky@chromium.org,3,836,2,834,och...@chromium.org,davidjames@chromium.org
+mf,1724,Cannot open the expression panel of conditional breakpoint,jlaster@mozilla.com,1,820,6,814,vporof@mozilla.com,dao+bmo@mozilla.com
+mf,827,Initial implementation of Firefox Accounts device registration,pbooth@mozilla.com,1,818,9,809,markh@mozilla.com,dao+bmo@mozilla.com
+mf,278,Counting number of vertices and triangles of a snapshot,dmu@mozilla.com,1,772,5,767,vporof@mozilla.com,dao+bmo@mozilla.com
+gc,10170,firmware_CorruptBothFwBodyAB.dev not coming back online after corruption and warm_reset (samus),shchen@chromium.org,3,759,3,756,waihong@chromium.org,davidjames@chromium.org
+mf,583,Remove use of for-each from webapprt/.,arai.unmht@gmail.com,2,733,9,724,cpeterson@mozilla.com,dao+bmo@mozilla.com
+mf,1123,"Logspam in console mochitests - ""hud.ui.webConsoleClient is null""",lclark@mozilla.com,3,717,8,709,mihai.sucan@gmail.com,dao+bmo@mozilla.com
+gc,3974, Regression: In App launcher 'Open as Window' option not seen in any App context menu.,mitchelljones@chromium.org,3,703,8,695,tapted@chromium.org,davidjames@chromium.org
+mc,2166,[FxOS] Enable VP9 codec for the Android version after KK.,bwu@mozilla.com,2,698,4,694,j@mailb.org,bzbarsky@mit.edu
+mc,1612,[FFOS]  cookpad.com videos fail to play,bwu@mozilla.com,2,698,9,689,cajbir.bugzilla@cd.pn,bzbarsky@mit.edu
+mc,690,Leak ContentParent through ParentIdleListener register to idle service,janus926@gmail.com,4,690,2,688,justin.lebar+bug@gmail.com,bzbarsky@mit.edu
+mf,512,ADB pull fails for symlinks,wdeng@mozilla.com,1,689,2,687,jryans@gmail.com,dao+bmo@mozilla.com
+mf,1783,The SyntaxTreeVisitor in Parser.jsm fails to process template literals and function default arguments,jsnajdr@gmail.com,2,684,3,681,vporof@mozilla.com,dao+bmo@mozilla.com
+mf,1984,The SyntaxTreeVisitor in Parser.jsm fails to process computed names for object properties,jsnajdr@gmail.com,2,684,3,681,vporof@mozilla.com,dao+bmo@mozilla.com
+mf,297,"Add ""Remove indexedDB  database"" context menu entry to storage inspector",jsnajdr@gmail.com,2,684,6,678,mak77@bonardo.net,dao+bmo@mozilla.com
+mf,1975,Errors when deleting an IndexedDB database are not handled,jsnajdr@gmail.com,2,684,9,675,mak77@bonardo.net,dao+bmo@mozilla.com
+gc,2084,Animation: Create enum InterpolationRange to replace ValueRange and ClampOpacity in interpolations,evem@chromium.org,2,656,2,654,katiewalker@chromium.org,davidjames@chromium.org
+mc,3075,Refactor service worker management code and implement limited lifetime for service workers,catalin.badea392@gmail.com,3,644,5,639,bent.mozilla@gmail.com,bzbarsky@mit.edu
+mc,3526,ServiceWorker::PostMessage should fail when calling from a dom object that doesn't have a global,catalin.badea392@gmail.com,3,644,5,639,nsm.nikhil@gmail.com,bzbarsky@mit.edu
+mc,1374,Implement Service Worker Clients.OpenWindow() for Desktop,catalin.badea392@gmail.com,3,644,6,638,nsm.nikhil@gmail.com,bzbarsky@mit.edu
+mc,1921,"Restrict stroke-linecap value to ""butt"" for svg circles and ellipses",twointofive@gmail.com,4,640,4,636,longsonr@gmail.com,bzbarsky@mit.edu
+mc,2988,"Zero-length SVG lines with stroke-linecap=""square"" don't render",twointofive@gmail.com,4,640,4,636,jwatt@jwatt.org,bzbarsky@mit.edu
+mc,5073,Intermittent test_serviceworker_lifetime.html | Test timed out,catalin.badea392@gmail.com,3,644,8,636,bkelly@mozilla.com,bzbarsky@mit.edu
+mc,8041,SVG stroke-linecap doesn't work for circles in Firefox,twointofive@gmail.com,4,640,4,636,longsonr@gmail.com,bzbarsky@mit.edu
+gc,10955,"""CQ is trying da patch"" spam",shey...@chromium.org,4,637,4,633,rmis...@chromium.org,davidjames@chromium.org
+mc,5291,Loading feImage with negative or percentage size svg causes an ns_error assertion,twointofive@gmail.com,4,640,7,633,longsonr@gmail.com,bzbarsky@mit.edu
+mc,2232,SVG feBlend rendering incorrect for some new blend mode types,twointofive@gmail.com,4,640,9,631,jwatt@jwatt.org,bzbarsky@mit.edu
+mc,4376,lighting filter region doesn't render beyond bounding box,twointofive@gmail.com,4,640,9,631,longsonr@gmail.com,bzbarsky@mit.edu
+mc,1829,mediasource duration not properly updated after an appendBuffer,jyavenard@mozilla.com,2,623,4,619,kinetik@flim.org,bzbarsky@mit.edu
+mc,1215,Enable new MediaSource architecture by default,jyavenard@mozilla.com,2,623,5,618,kinetik@flim.org,bzbarsky@mit.edu
+mc,2470,Hang with media.mediasource.format-reader,jyavenard@mozilla.com,2,623,5,618,kinetik@flim.org,bzbarsky@mit.edu
+mc,3652,Implement Media Source Extension Buffer monitoring as per spec,jyavenard@mozilla.com,2,623,5,618,padenot@mozilla.com,bzbarsky@mit.edu
+mc,6558,Shaka Player warning: appendBuffer() should not modify the MediaSource's duration: before 59.994 after 60 delta 0.006000,jyavenard@mozilla.com,2,623,5,618,cajbir.bugzilla@cd.pn,bzbarsky@mit.edu
+mc,10609,Video playback is broken on the web,jyavenard@mozilla.com,2,623,5,618,kinetik@flim.org,bzbarsky@mit.edu
+mc,2400,New MediaResource::SilentReadAt not always restoring state properly,jyavenard@mozilla.com,2,623,6,617,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,2522,MediaResource object will leak if last release not on the main thread,jyavenard@mozilla.com,2,623,6,617,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,3036,Add mochitest to ensure that we can transition from WAITING_FOR_DATA to END_OF_STREAM,jyavenard@mozilla.com,2,623,6,617,padenot@mozilla.com,bzbarsky@mit.edu
+mc,3478,Not all MediaDataDecoder are threadsafe,jyavenard@mozilla.com,2,623,6,617,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,4527,Remove MediaDataDemuxer::Init WAITING_FOR_DATA failure,jyavenard@mozilla.com,2,623,6,617,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,6810,MSE with trick mode DASH adaptation freezes playback on Firefox,jyavenard@mozilla.com,2,623,6,617,kinetik@flim.org,bzbarsky@mit.edu
+mc,9869,Crash in dom::MediaSource::Duration,jyavenard@mozilla.com,2,623,6,617,kinetik@flim.org,bzbarsky@mit.edu
+mc,10928,Playback stalls on video generated by MSE inside buffered range,jyavenard@mozilla.com,2,623,6,617,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,11307,SkipVideoDemuxToNextKeyFrame could incorrectly jump over gap in data.,jyavenard@mozilla.com,2,623,6,617,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,372,Unable to play back YouTube video - continually polls/shows AJAX spinner,jyavenard@mozilla.com,2,623,7,616,kinetik@flim.org,bzbarsky@mit.edu
+mc,1559,Videos with negative time frames gets evicted.,jyavenard@mozilla.com,2,623,7,616,cajbir.bugzilla@cd.pn,bzbarsky@mit.edu
+mc,2059,Remove use of monitor in MediaFormatReader::ResetDecode(),jyavenard@mozilla.com,2,623,7,616,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,2762,"Bitmovin dash-player.com ""Elephant's Dream (by Evostream) - SegmentList"" video does not play (demuxer failure on the fir",jyavenard@mozilla.com,2,623,7,616,kinetik@flim.org,bzbarsky@mit.edu
+mc,3111,Setting currentTime when readyState is HAVE_NOTHING incorrectly throws an exception: Invalid State,jyavenard@mozilla.com,2,623,7,616,kinetik@flim.org,bzbarsky@mit.edu
+mc,3239,Remove MediaResource::Read/Seek/Tell API,jyavenard@mozilla.com,2,623,7,616,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,3323,Youtube video stalls with holes in buffered ranges,jyavenard@mozilla.com,2,623,7,616,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,3607,When the EndOfStream algorithm runs error should be thrown to media element,jyavenard@mozilla.com,2,623,7,616,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,5152,When sourcebuffer.mode = sequence timestampOffset is incorrectly calculated,jyavenard@mozilla.com,2,623,7,616,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,5957,Modern.ie MSE demo stalls,jyavenard@mozilla.com,2,623,7,616,kinetik@flim.org,bzbarsky@mit.edu
+mc,6839,Decoders should be drained whenever a gap is encountered playing MSE content,jyavenard@mozilla.com,2,623,7,616,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,6862,currentTime starts ticking although only segments for a moment far into the future are loaded,jyavenard@mozilla.com,2,623,7,616,kinetik@flim.org,bzbarsky@mit.edu
+mc,6907,loadeddata should be fired after seeked event,jyavenard@mozilla.com,2,623,7,616,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,7152,Just updated to Firefox 43 and can't play video anymore,jyavenard@mozilla.com,2,623,7,616,kinetik@flim.org,bzbarsky@mit.edu
+mc,9911,test_BufferingWait_mp4.html times out for audio promise is not resolved or rejected,jyavenard@mozilla.com,2,623,7,616,kinetik@flim.org,bzbarsky@mit.edu
+mc,10958,MediaFormatReader's internal seek may never complete under some circumstances,jyavenard@mozilla.com,2,623,7,616,kinetik@flim.org,bzbarsky@mit.edu
+mc,11062,ogv video stopped working after one of the updates,jyavenard@mozilla.com,2,623,7,616,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,552,Incorrect MediaSource buffered range being reported in ended mode.,jyavenard@mozilla.com,2,623,8,615,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,860,Stagefright/SampleIterator/MoofParser not properly handling edts' empty edit,jyavenard@mozilla.com,2,623,8,615,padenot@mozilla.com,bzbarsky@mit.edu
+mc,1562,When evicting data the next appendBuffer could render samples undecodable,jyavenard@mozilla.com,2,623,8,615,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,2528,Add about:media plugin support for new MSE,jyavenard@mozilla.com,2,623,8,615,cajbir.bugzilla@cd.pn,bzbarsky@mit.edu
+mc,2733,Dash Live streams don't work in Firefox with MSE,jyavenard@mozilla.com,2,623,8,615,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,4095,Sound during HTML5 video playback cuts off in some videos in Nightly 43a1,jyavenard@mozilla.com,2,623,8,615,kinetik@flim.org,bzbarsky@mit.edu
+mc,4116,TrackBuffersManager unnecessarily recreate a new demuxer after parsing a media segment.,jyavenard@mozilla.com,2,623,8,615,kinetik@flim.org,bzbarsky@mit.edu
+mc,6197,MSE : Wrong seekable values for live stream,jyavenard@mozilla.com,2,623,8,615,padenot@mozilla.com,bzbarsky@mit.edu
+mc,8167,Can't seek in video with only a single video frame,jyavenard@mozilla.com,2,623,8,615,kinetik@flim.org,bzbarsky@mit.edu
+mc,11301,MSE Sourcebuffer may reports contiguous buffered range but will stall attempting to play due to internal gap,jyavenard@mozilla.com,2,623,8,615,padenot@mozilla.com,bzbarsky@mit.edu
+mc,11477,Intermittent dom/media/mediasource/test/test_ResumeAfterClearing_mp4.html | Test timed out.,jyavenard@mozilla.com,2,623,8,615,padenot@mozilla.com,bzbarsky@mit.edu
+mc,11516,video doesn't play,jyavenard@mozilla.com,2,623,8,615,roc@ocallahan.org,bzbarsky@mit.edu
+mc,20,Have TimeUnit object,jyavenard@mozilla.com,2,623,9,614,padenot@mozilla.com,bzbarsky@mit.edu
+mc,281,MediaPromise use causing lots of non-fatal assertions.,jyavenard@mozilla.com,2,623,9,614,padenot@mozilla.com,bzbarsky@mit.edu
+mc,2723,Enable new WebMDemuxer / MediaFormatReader by default,jyavenard@mozilla.com,2,623,9,614,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,3103,Intermittent mediasource-config-change-mp4-v-framerate.html | expected OK,jyavenard@mozilla.com,2,623,9,614,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,3698,Summary: Stall in MSE when using webm,jyavenard@mozilla.com,2,623,9,614,kinetik@flim.org,bzbarsky@mit.edu
+mc,3961,some MediaDataDecoder will call InputExhausted call even when not needing more data,jyavenard@mozilla.com,2,623,9,614,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,4123,No audio in YouTube or A/V sync very broken,jyavenard@mozilla.com,2,623,9,614,kinetik@flim.org,bzbarsky@mit.edu
+mc,4487,Remove requirements for a main thread demuxer,jyavenard@mozilla.com,2,623,9,614,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,5782,Seeking forward during streaming audio causes unreasonable caching and glitches.,jyavenard@mozilla.com,2,623,9,614,kinetik@flim.org,bzbarsky@mit.edu
+mc,6766,StateMirroring/StateWatching calling the mirror callback out of order,jyavenard@mozilla.com,2,623,9,614,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,8161,webm videos are not working any more with new WebMDemuxer,jyavenard@mozilla.com,2,623,9,614,kinetik@flim.org,bzbarsky@mit.edu
+mc,11203,Vine plays one frame and then stops in Nightly,jyavenard@mozilla.com,2,623,9,614,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,637,Intermittent media-source/mediasource-redundant-seek.html | expected OK,jyavenard@mozilla.com,2,623,10,613,padenot@mozilla.com,bzbarsky@mit.edu
+mc,1206,Add ability for MediaFormatReader to detect change of stream content,jyavenard@mozilla.com,2,623,10,613,kinetik@flim.org,bzbarsky@mit.edu
+mc,2622,"Failing mediasource-is-type-supported.html.ini: Test valid MP4 type ""audio/mp4;codecs=""mp4a.67""",jyavenard@mozilla.com,2,623,10,613,kinetik@flim.org,bzbarsky@mit.edu
+mc,3087,Intermittent mediasource-config-change-mp4-av-video-bitrate.html | expected OK,jyavenard@mozilla.com,2,623,10,613,kinetik@flim.org,bzbarsky@mit.edu
+mc,5228,Remove arguments provided to MediaDataDemuxer::NotifyDataArrived,jyavenard@mozilla.com,2,623,10,613,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,5723,loadeddata event shouldn't be fired prior the first frame being decoded,jyavenard@mozilla.com,2,623,10,613,cpearce@mozilla.com,bzbarsky@mit.edu
+mc,6801,mediasource.addSourceBuffer returns the wrong error type when mimetype isn't supported,jyavenard@mozilla.com,2,623,10,613,padenot@mozilla.com,bzbarsky@mit.edu
+mc,7550,Media source extensions fail to play a WebM file with BlockGroup elements,jyavenard@mozilla.com,2,623,10,613,kinetik@flim.org,bzbarsky@mit.edu
+mc,8520,This video SIGSEGVs firefox,jyavenard@mozilla.com,2,623,10,613,kinetik@flim.org,bzbarsky@mit.edu
+mc,11175,MediaThreadPool should be able to be created outside the main thread,jyavenard@mozilla.com,2,623,10,613,cpearce@mozilla.com,bzbarsky@mit.edu
+gc,271,Fix reboot logic in PrecacheServiceLauncher,twif...@chromium.org,3,606,7,599,jochen@chromium.org,davidjames@chromium.org
+gc,7769,Adobe Flash Player AdBreakTimelineItem class Memory Corruption Vulnerability,natashenka@google.com,2,599,3,596,cevans@chromium.org,davidjames@chromium.org
+mf,287,[e10s] Closing tab during ���Save As��� Complete Document��?��crashes with MsgRouteError,jld@mozilla.com,2,580,1,579,jld@mozilla.com,dao+bmo@mozilla.com
+mc,3452,Support remainder arguments from predefined parsers in mach.,james@hoppipolla.co.uk,1,542,3,539,cam@mcc.id.au,bzbarsky@mit.edu
+mc,2333,IonMonkey: Optimize integer (unsigned) divide by constant,mau@ric.io,2,507,1,506,mau@ric.io,bzbarsky@mit.edu
+gc,10214,conformance/textures/misc/tex-input-validation.html fails on all platform,qiankun....@intel.com,4,501,1,500,qiankun....@intel.com,davidjames@chromium.org
+gc,11289,[spring] exynos driver divide by zero crash on boot,davidri...@chromium.org,4,500,5,495,seanpaul@chromium.org,davidjames@chromium.org
+gc,2490,WebGL2:no 3D texture layer attachment to FBO,qiankun....@intel.com,4,501,9,492,zmo@chromium.org,davidjames@chromium.org
+gc,2834,Kiosk App TestNav encountering error while sign in.,cyrusm@chromium.org,4,472,4,468,juanra...@chromium.org,davidjames@chromium.org
+mc,7153,Linux: temporary download directory is not created specifically for each user,aidin@aidinhut.com,3,468,5,463,dveditz@mozilla.com,bzbarsky@mit.edu
+mf,1680,Incorrect branding for 45.0.1esr build,rail@mozilla.com,3,442,6,436,gavin.sharp@gmail.com,dao+bmo@mozilla.com
+gc,5773,recovery_gen.py should stop outputting HWIDs to recovery.json unless necessary,stephenlin@chromium.org,4,405,2,403,ddrew@chromium.org,davidjames@chromium.org
+mf,1980,WindowsPreviewPerTab code causes very frequent warnings in the console: Warning: NetUtil.asyncFetch() requires the chann,ckerschb@christophkerschbaumer.com,2,412,9,403,g.maone@informaction.com,dao+bmo@mozilla.com
+mf,366,screenshot --dpi asks for pixels per inch and uses it as devicePixelRatio,jj@johanjensen.dk,4,275,1,274,jj@johanjensen.dk,dao+bmo@mozilla.com
+mf,12,Drag and drop mode in inspector shows indicator before opening tag when mouse is placed to the left from closing tag,chevobbe.nicolas@gmail.com,2,242,6,236,pbrosset@mozilla.com,dao+bmo@mozilla.com
+mf,67,e10s -- Fix browser/base/content/test/general/browser_bug555767.js - test relies on browser.sessionHistory,twalker@mozilla.com,3,217,10,207,enndeakin@gmail.com,dao+bmo@mozilla.com

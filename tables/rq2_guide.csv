@@ -1,0 +1,9 @@
+mode,dataset,n,MRR,SD
+text,gc,3,0.3861,0.0013
+text,mc,3,0.2267,0.0016
+text,mf,3,0.2093,0.0016
+random,gc,3,0.3375,0.0017
+random,mc,3,0.1936,0.002
+random,mf,3,0.195,0.005
+node2vec,mc,2,0.1065,0.003
+node2vec,mf,3,0.1043,0.012

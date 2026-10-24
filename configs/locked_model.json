@@ -1,0 +1,23 @@
+{
+  "encoder": "minilm",
+  "valve": "bug",
+  "uniform_valve": false,
+  "dev_graph": "centroid",
+  "k_bug": 20,
+  "k_dev": 15,
+  "exp_layers": 2,
+  "imp_layers": 2,
+  "dropout": 0.1,
+  "lr": 0.001,
+  "gate_mode": "freq",
+  "fusion": "zscore",
+  "story": 0.5,
+  "tau": 0.0,
+  "freq_exponent": 0.5,
+  "imp_query": "prop",
+  "epochs": 40,
+  "patience": 10,
+  "low_coef": 0.35,
+  "batch_size": 2048,
+  "weight_decay": 0.0001
+}

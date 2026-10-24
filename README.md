@@ -1,42 +1,36 @@
-# Hy-LIN: Hybrid Latent Interaction Network for Bug Triage
+# Hy-LIN
 
-This repository provides the reference implementation accompanying the paper **"Hy-LIN: Reconstructing Latent Collaborations for Bug Triage with Dual-Path Graph Learning"**.
+Hybrid latent interaction network for bug triage. A frozen text encoder fixes a sparse set of bug–bug candidates, a valve learns how much each candidate contributes, and two paths score developers: an explicit path on the augmented assignment graph and an implicit path on a developer graph built from textual centroids. A frequency gate mixes the two standardized scores.
 
-## 💡 Overview
+The locked configuration is `configs/locked_model.json`.
 
-Bug triage is a fundamental task in software maintenance. **Hy-LIN** addresses this by operating directly on native issue-tracking data without requiring manual feature engineering. 
+## Data
 
-The framework tackles the issue via two macro-level innovations:
-1. **Learnable Graph Augmentation:** Dynamically injects sparse, semantic-guided latent interactions into the observed bug-developer bipartite graph.
-2. **Dual-Path Propagation and Fusion:** Adaptively fuses topological representations from both explicit (bipartite) and implicit (developer-projected) structural views.
-
-*(For detailed mathematical formulations, gating mechanisms, and BPR optimization strategies, please refer to the Methodology section of our main paper.)*
-
----
-
-## 📌 Important Notes for Artifact Evaluation
-
-### 1. Toy Dataset Declaration
-To facilitate rapid reproducibility checks for reviewers and avoid distributing large-scale proprietary/community data, **the datasets included in the `data/` directory are heavily subsampled "Toy Datasets"**. They preserve the structural integrity required to verify the pipeline's execution but are not the full-scale datasets used in the paper.
-
-For complete raw issue tracker data and standardized preprocessing protocols, please refer to the recent benchmark dataset formalized in:
-> *Tao, Y., Dai, J., Ma, L., Ren, Z., & Wang, F. (2025). Structural contrastive learning based automatic bug triaging. Automated Software Engineering, 32(51). https://doi.org/10.1007/s10515-025-00517-5*
-
-### 2. Performance Metrics Variation
-You may observe varying numerical metrics when running this repository compared to the official paper. This is strictly expected because:
-* The provided datasets are miniaturized subsets.
-* The paper reports the most robust, conservative baselines averaged across multiple random seeds, rather than cherry-picked peaks.
-* Post-submission codebase optimizations (e.g., streamlined sparse operations) are included here for better efficiency.
-
----
-
-## 🚀 Quick Start
-
-**Requirements:** Python 3.8+, PyTorch >= 1.12.
+`data/processed/` holds the cleaned GC, MC, and MF records used by the paper (`owner`, `issue_title`, `description`), stored compressed because two of the files exceed GitHub's 100MB limit.
 
 ```bash
-# 1. Clone the repository and install dependencies
-pip install -r requirements.txt
+gzip -dk data/processed/gc.json.gz data/processed/mc.json.gz data/processed/mf.json.gz
+```
 
-# 2. Run the evaluation pipeline (Example: Chromium toy dataset)
-python run.py --dataset gc
+## Train the locked model
+
+The encoder is `sentence-transformers/all-MiniLM-L6-v2`. The code loads it with `local_files_only=True`, so the weights have to be in the local Hugging Face cache before training. From `code/`:
+
+```bash
+python -m hy_lin.train \
+  --data ../data/processed/mf.json \
+  --encoder minilm \
+  --dev-graph centroid \
+  --k-bug 20 --k-dev 15 \
+  --exp-layers 2 --imp-layers 2 \
+  --dropout 0.1 --lr 0.001 --weight-decay 0.0001 \
+  --batch-size 2048 --epochs 40 --patience 10 \
+  --tau 0.0 --freq-exponent 0.5 \
+  --fusion zscore --story 0.5 --low-coef 0.35 \
+  --imp-query prop --gate-mode freq --valve bug \
+  --seed 42
+```
+
+Replace `mf.json` with `gc.json` or `mc.json` for the other two collections. `scripts/baselines/run_hylin.py` launches this locked setting on all three datasets and seeds 42, 43, and 44. The other scripts in `scripts/baselines/` are the comparison methods under the same release-order split.
+
+`tables/` contains the result tables reported in the paper.

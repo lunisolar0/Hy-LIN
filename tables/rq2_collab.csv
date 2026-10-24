@@ -1,0 +1,4 @@
+dataset,n_dev,n_active,k,precision_text_neighbors_in_coactive,random_expectation,lift,null_mean,z_vs_permuted
+gc,2418,1777,15,0.0264,0.00621,4.26,0.0151,12.4
+mc,2234,1041,15,0.0478,0.00672,7.12,0.0156,26.9
+mf,1165,440,15,0.0867,0.01289,6.73,0.0323,33.5
