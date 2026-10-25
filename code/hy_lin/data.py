@@ -154,6 +154,31 @@ def _encode_hf(texts: list[str], device: torch.device, name: str, batch_size: in
     return torch.cat(pieces, dim=0).numpy()
 
 
+def centroid_dev_graph(summed: torch.Tensor, counts: torch.Tensor, k_dev: int, temperature: float = 0.2):
+    """由缺陷向量之和与条数构造开发者中心图。
+
+    counts 为 0 的开发者没有中心：不作为任何人的邻居，自身的边权也置 0。
+    全量训练集上没有这种开发者，结果与一次性构图相同。
+    """
+    counts = counts.to(device=summed.device, dtype=summed.dtype)
+    centroids = F.normalize(summed / counts.clamp(min=1).unsqueeze(-1), dim=-1)
+    has = counts > 0
+    sim = centroids @ centroids.T
+    sim.fill_diagonal_(-1e9)
+    empty = ~has
+    if bool(empty.any()):
+        sim = sim.clone()
+        sim[empty, :] = -1e9
+        sim[:, empty] = -1e9
+        sim.fill_diagonal_(-1e9)
+    values, index = torch.topk(sim, k_dev, dim=-1)
+    weight = torch.softmax(values / temperature, dim=-1)
+    if bool(empty.any()):
+        weight = weight.clone()
+        weight[empty] = 0
+    return index, weight
+
+
 def _dev_graph_overlap(train_knn: torch.Tensor, train_owner: torch.Tensor, n_dev: int, k_dev: int, device: torch.device):
     """两个开发者若彼此的训练缺陷落在文本近邻里，就连一条同质边。"""
     src = train_owner.unsqueeze(1).expand_as(train_knn).reshape(-1).to(device)
@@ -254,19 +279,11 @@ def prepare(
     dim = train_emb.size(1)
     summed = torch.zeros(n_dev, dim, device=device)
     summed.index_add_(0, train_owner.to(device), train_emb)
-    centroids = F.normalize(summed / counts.clamp(min=1).unsqueeze(-1).to(device), dim=-1)
-    # 时序切分下可能有负责人没有训练缺陷（冷启动），其质心为 0。
-    has_train = counts > 0
     if dev_graph == "overlap":
         dev_knn, dev_w = _dev_graph_overlap(train_knn, train_owner, n_dev, k_dev, device)
     else:
-        dev_sim = centroids @ centroids.T
-        dev_sim.fill_diagonal_(-1e9)
-        # 冷启动负责人没有训练画像，不让它们充当别人的能力邻居。
-        dev_sim[~has_train] = -1e9
-        dev_val, dev_idx = torch.topk(dev_sim, k_dev, dim=-1)
-        dev_w = torch.softmax(dev_val / 0.2, dim=-1).cpu()
-        dev_knn = dev_idx.cpu()
+        dev_knn, dev_w = centroid_dev_graph(summed, counts.to(device), k_dev)
+        dev_knn, dev_w = dev_knn.cpu(), dev_w.cpu()
 
     payload = {
         "signature": signature,

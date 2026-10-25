@@ -31,6 +31,8 @@ python -m hy_lin.train \
   --seed 42
 ```
 
+A training step rebuilds the centroid graph without the current batch, and also leaves that batch out of the assignee edges and the developer pool. Validation and test use the graph built from the full training window.
+
 Replace `mf.json` with `gc.json` or `mc.json` for the other two collections. `scripts/baselines/run_hylin.py` launches this locked setting on all three datasets and seeds 42, 43, and 44. The other scripts in `scripts/baselines/` are the comparison methods under the same release-order split.
 
 `tables/` contains the result tables reported in the paper.

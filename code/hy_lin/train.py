@@ -17,7 +17,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
-from hy_lin.data import prepare, split_views
+from hy_lin.data import centroid_dev_graph, prepare, split_views
 from hy_lin.guides import node2vec_knn, random_knn
 from hy_lin.metrics import (
     KS,
@@ -259,6 +259,12 @@ def main() -> None:
     dev_knn = bundle["dev_knn"].to(device)
     dev_w = bundle["dev_w"].to(device)
     counts_d = counts.to(device)
+    dev_summed = None
+    dev_unit = None
+    if args.dev_graph == "centroid":
+        dev_unit = F.normalize(tensors["emb"], dim=-1)
+        dev_summed = torch.zeros(n_dev, dev_unit.size(1), device=device)
+        dev_summed.index_add_(0, tensors["owner"], dev_unit)
     if args.gate_decay > 0:
         # 时间衰减门（§6.1）：交付顺序即时间的代理。age 归一化到 [0,1]，
         # 权重 exp(-λ·age)，最近一条记 1、最老一条记 e^{-λ}。
@@ -323,13 +329,25 @@ def main() -> None:
         for start in range(0, n_train, args.batch_size):
             batch = order[start : start + args.batch_size]
             optimizer.zero_grad(set_to_none=True)
+            if dev_summed is None:
+                step_knn, step_w = dev_knn, dev_w
+            else:
+                held_sum = dev_summed.clone()
+                held_count = counts_d.clone()
+                held_sum.index_add_(0, tensors["owner"][batch], -dev_unit[batch])
+                held_count.index_add_(
+                    0, tensors["owner"][batch], -torch.ones(batch.numel(), device=device)
+                )
+                held_count.clamp_(min=0)
+                with torch.no_grad():
+                    step_knn, step_w = centroid_dev_graph(held_sum, held_count, args.k_dev)
             logits, gate, _w, s_exp, s_imp = model.encode_train_batch(
                 tensors["emb"],
                 tensors["owner"],
                 tensors["knn"],
                 batch,
-                dev_knn,
-                dev_w,
+                step_knn,
+                step_w,
                 log_freq,
             )
             logits = logits - args.tau * prior
